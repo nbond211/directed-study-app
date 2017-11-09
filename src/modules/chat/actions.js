@@ -9,20 +9,12 @@ export const sendTuttiMessage = text => {
   }
 };
 
-export const sendUserMessage = text => {
+export const sendUserMessage = ({text, linkTo}) => {
   return {
     type: SEND_USER_MESSAGE,
     payload: {
-      text
-    }
-  }
-};
-
-export const setCurrentMessage = id => {
-  return {
-    type: SET_CURRENT_MESSAGE,
-    payload: {
-      id
+      text: text,
+      linkTo: linkTo
     }
   }
 };
@@ -33,11 +25,5 @@ export const setOptions = options => {
     payload: {
       options
     }
-  }
-};
-
-export const clearOptions = () => {
-  return {
-    type: CLEAR_OPTIONS
   }
 };

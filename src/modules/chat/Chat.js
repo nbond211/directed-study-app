@@ -4,40 +4,90 @@ import { connect } from 'react-redux';
 import { GiftedChat } from 'react-native-gifted-chat';
 
 import * as actions from './actions';
+import convoData from './conversations/emotions/dare-selfie';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexDirection: 'row'
   }
 });
 
-const Chat = props => {
+const {convo} = convoData;
 
-  const { messages, currentMessage, messageSent, awaitingReply, options } = props;
+class Chat extends React.Component {
+    static displayName = 'Chat';
 
-  return (
-    <GiftedChat
-        messages={[]}
-        user={{
-          _id: 1,
-        }}
-        listViewProps={{removeClippedSubviews: false}}
-      />
-  )
-};
+    componentDidMount() {
+        const { currentMessage, messageSent, sendTuttiMessage } = this.props;
 
-Chat.displayName = 'Chat';
+        if (!messageSent) {
+            const {texts} = convo[`${currentMessage}`];
+            texts.forEach(text => sendTuttiMessage(text));
+        }
+    }
+
+    componentWillReceiveProps(nextProps) {
+        const { currentMessage, sendTuttiMessage, setOptions } = this.props;
+
+        if (currentMessage !== nextProps.currentMessage && !nextProps.messageSent) {
+            const {texts} = convo[`${nextProps.currentMessage}`];
+            texts.forEach(text => sendTuttiMessage(text));
+        }
+
+        const {options} = convo[`${nextProps.currentMessage}`];
+        if (options && !nextProps.awaitingReply) {
+            setOptions(options);
+        }
+    }
+
+    render() {
+        const { messages, currentMessage, messageSent, awaitingReply, options, sendUserMessage } = this.props;
+
+        const renderInputToolbar = () => {
+
+
+            const buttons = options.toJS().map(option => {
+                return (
+                    <Button
+                        title={ option.text }
+                        key={ option.text }
+                        onPress={ () => sendUserMessage(option) }
+                    />
+                );
+            });
+
+            return (
+                awaitingReply &&
+                <View style={styles.container}>
+                    { buttons }
+                </View>
+            )
+        };
+
+        return (
+            <GiftedChat
+                messages={messages.toJS()}
+                user={{
+                    _id: 1,
+                }}
+                listViewProps={{removeClippedSubviews: false}}
+                renderInputToolbar={ renderInputToolbar }
+            />
+        )
+    }
+}
 
 export default connect(
   state => ({
-    messages: state.chat.messages,
-    convoId: state.chat.convoId,
-    currentMessage: state.chat.currentMessage,
-    messageSent: state.chat.messageSent,
-    awaitingReply: state.chat.awaitingReply,
-    options: state.chat.options
+    messages: state.chat.get('messages'),
+    convoId: state.chat.get('convoId'),
+    currentMessage: state.chat.get('currentMessage'),
+    messageSent: state.chat.get('messageSent'),
+    awaitingReply: state.chat.get('awaitingReply'),
+    options: state.chat.get('options')
   }),
   dispatch => ({
     sendTuttiMessage: text => dispatch(actions.sendTuttiMessage(text)),

@@ -2,7 +2,7 @@ import { NavigationActions } from 'react-navigation';
 import { AppNavigator } from './Navigation';
 
 let initialNavState = AppNavigator.router.getStateForAction(NavigationActions.init());
-const firstAction = AppNavigator.router.getActionForPathAndParams('Discover');
+const firstAction = AppNavigator.router.getActionForPathAndParams('Chat');
 initialNavState = AppNavigator.router.getStateForAction(firstAction, initialNavState);
 
 export default function REDUCER(state = initialNavState, action) {

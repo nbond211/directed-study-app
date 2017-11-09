@@ -15,29 +15,11 @@ const styles = StyleSheet.create({
 
 const Chat = props => {
 
-  const { changeCategory, category } = props;
+  const { messages, currentMessage, messageSent, awaitingReply, options } = props;
 
   return (
     <GiftedChat
-        messages={[
-        {
-          _id: 1,
-          text: 'Hello developer',
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: 'React Native',
-            avatar: 'https://facebook.github.io/react/img/logo_og.png',
-          },
-        },
-        {
-  _id: 2,
-  text: 'This is a system message',
-  createdAt: new Date(Date.UTC(2016, 5, 11, 17, 20, 0)),
-  system: true,
-  // Any additional custom parameters are passed through
-}
-      ]}
+        messages={[]}
         user={{
           _id: 1,
         }}
@@ -50,9 +32,18 @@ Chat.displayName = 'Chat';
 
 export default connect(
   state => ({
-    category: state.chat.category
+    messages: state.chat.messages,
+    convoId: state.chat.convoId,
+    currentMessage: state.chat.currentMessage,
+    messageSent: state.chat.messageSent,
+    awaitingReply: state.chat.awaitingReply,
+    options: state.chat.options
   }),
   dispatch => ({
-    changeCategory: category => dispatch(actions.changeCategory(category))
+    sendTuttiMessage: text => dispatch(actions.sendTuttiMessage(text)),
+    sendUserMessage: text => dispatch(actions.sendUserMessage(text)),
+    setCurrentMessage: id => dispatch(actions.setCurrentMessage(id)),
+    setOptions: options => dispatch(actions.setOptions(options)),
+    clearOptions: () => dispatch(actions.clearOptions())
   })
 )(Chat);

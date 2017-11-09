@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyleSheet, View, Button, Text } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -15,8 +16,6 @@ const styles = StyleSheet.create({
 const Discover = props => {
 
   const { changeCategory, category } = props;
-
-  console.log('testing');
 
   return (
     <View style={styles.container}>
@@ -36,6 +35,14 @@ const Discover = props => {
 };
 
 Discover.displayName = 'Discover';
+
+Discover.propTypes = {
+  navigation: PropTypes.object.isRequired
+};
+
+Discover.navigationOptions = {
+  tabBarLabel: 'Discover'
+};
 
 export default connect(
   state => ({

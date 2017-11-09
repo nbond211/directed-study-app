@@ -1,7 +1,6 @@
 import discover from './discover';
 import chat from './chat';
-
-console.log(chat);
+import navigation from './navigation';
 
 //and exporting them here
-export { discover, chat };
+export { discover, chat, navigation };

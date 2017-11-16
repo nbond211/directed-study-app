@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, Button, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 import { GiftedChat } from 'react-native-gifted-chat';
+import { Container, Header, Content, Button, Text } from 'native-base';
 
 import * as actions from './actions';
 import convoData from './conversations/emotions/dare-selfie';
@@ -11,7 +12,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row'
+    flexDirection: 'column',
+    backgroundColor: '#FBFCFF'
+  },
+
+  response: {
+      alignSelf: 'auto',
+      marginBottom: 10,
+      backgroundColor: '#595CF6'
   }
 });
 
@@ -52,10 +60,14 @@ class Chat extends React.Component {
             const buttons = options.toJS().map(option => {
                 return (
                     <Button
-                        title={ option.text }
+                        style={styles.response}
+                        rounded
+                        primary
                         key={ option.text }
                         onPress={ () => sendUserMessage(option) }
-                    />
+                    >
+                        <Text>{option.text}</Text>
+                    </Button>
                 );
             });
 
@@ -75,6 +87,7 @@ class Chat extends React.Component {
                 }}
                 listViewProps={{removeClippedSubviews: false}}
                 renderInputToolbar={ renderInputToolbar }
+                minInputToolbarHeight={ options.size * 100 }
             />
         )
     }

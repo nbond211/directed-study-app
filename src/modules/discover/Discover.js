@@ -1,36 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet, View, Button, Text } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
 import { connect } from 'react-redux';
 
 import * as actions from './actions';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-});
+import Time from './categories/time/Time';
+import Emotions from './categories/emotions/Emotions';
+import Habits from './categories/habits/Habits';
+import Notifications from './categories/notifications/Notifications';
 
 const Discover = props => {
 
   const { changeCategory, category } = props;
 
   return (
-    <View style={styles.container}>
-      <Text>{category}</Text>
-      <Button
-          onPress={() => changeCategory('notifications')}
-          title="Notifications"
-          color="#841584"
-        />
-        <Button
-            onPress={() => changeCategory('time')}
-            title="Time"
-            color="#841584"
-          />
-    </View>
+      <Container>
+        <Header hasTabs/>
+        <Tabs renderTabBar={()=> <ScrollableTab />}>
+          <Tab heading="TIME">
+            <Time />
+          </Tab>
+          <Tab heading="EMOTIONS">
+            <Emotions />
+          </Tab>
+          <Tab heading="HABITS">
+            <Habits />
+          </Tab>
+          <Tab heading="NOTIFICATIONS">
+            <Notifications />
+          </Tab>
+        </Tabs>
+      </Container>
   )
 };
 

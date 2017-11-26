@@ -52,7 +52,7 @@ class Chat extends React.Component {
     }
 
     render() {
-        const { messages, currentMessage, messageSent, awaitingReply, options, sendUserMessage } = this.props;
+        const { messages, awaitingReply, options, sendUserMessage } = this.props;
 
         const renderInputToolbar = () => {
 

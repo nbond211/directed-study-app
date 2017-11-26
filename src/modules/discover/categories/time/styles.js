@@ -3,8 +3,10 @@ import { StyleSheet } from 'react-native';
 const lightBlue = '#B7C6FF';
 const purple ='#7875FF';
 const lightGray ='#FAFCFF';
+const darkGray = '#6D6D6D';
 
 export default StyleSheet.create({
+    // row 1 -start-
     row1: {
         backgroundColor: lightBlue,
         height: 216
@@ -48,4 +50,26 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         fontSize: 23
     },
+    // row 1 -end-
+
+    // row 2 -start-
+    row2: {
+        height: 175,
+        backgroundColor: lightGray
+    },
+    textRow: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    grayText: {
+        fontSize: 15,
+        color: darkGray,
+        fontWeight: 'bold'
+    },
+    purpleText: {
+        fontSize: 15,
+        color: purple,
+        fontWeight: 'bold'
+    }
+    // row 2 -end-
 });

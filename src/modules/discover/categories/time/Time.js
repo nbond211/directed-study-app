@@ -25,6 +25,16 @@ export default class Time extends Component {
                                 </Row>
                             </Grid>
                         </Row>
+                        <Row style={Styles.row2}>
+                            <Grid style={Styles.gridContainer}>
+                                <Row style={Styles.textRow}>
+                                    <Text style={Styles.grayText}>Do you feel yourself spending <Text style={Styles.purpleText}>more time</Text> than you expected to in the app?</Text>
+                                </Row>
+                                <Row style={Styles.textRow}>
+                                    <Text style={Styles.grayText}>Apps should empower you to feel aware and in control of how much time you spend using the app.</Text>
+                                </Row>
+                            </Grid>
+                        </Row>
                     </Grid>
                 </Content>
             </Container>

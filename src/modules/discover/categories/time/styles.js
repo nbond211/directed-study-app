@@ -4,6 +4,7 @@ const lightBlue = '#B7C6FF';
 const purple ='#7875FF';
 const lightGray ='#FAFCFF';
 const darkGray = '#6D6D6D';
+const darkPurple = '#4C4AC8';
 
 export default StyleSheet.create({
     // row 1 -start-
@@ -70,6 +71,53 @@ export default StyleSheet.create({
         fontSize: 15,
         color: purple,
         fontWeight: 'bold'
-    }
+    },
     // row 2 -end-
+
+    // row 3 -start-
+    row3: {
+        height: 330,
+        backgroundColor: lightBlue
+    },
+    autoplayTitle: {
+        fontSize: 20,
+        color: darkPurple,
+        fontWeight: 'bold'
+    },
+    autoplayTitleRow: {
+        flex: 0,
+        marginTop: 14,
+        marginBottom: 7
+    },
+    autoplayImg: {
+        height: 171,
+        width: 297
+    },
+    autoplayImgRow: {
+        height: 171,
+        flex: 0,
+        marginBottom: 15
+    },
+    autoplayTextRow: {
+        flex: 0,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    // row 3 -end-
+
+    // row 4 -start-
+    row4: {
+        height: 93,
+        backgroundColor: lightGray
+    },
+    queueButtonRow: {
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    queueButton: {
+        alignSelf: 'center',
+        backgroundColor: purple
+    }
+
+    // row 4 -end-
 });

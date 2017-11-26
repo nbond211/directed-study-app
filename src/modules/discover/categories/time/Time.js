@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import { Container, Content, Text } from 'native-base';
+import { View, Image } from 'react-native';
+import { Button, Container, Content, Text } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
 import Styles from './styles';
@@ -32,6 +32,34 @@ export default class Time extends Component {
                                 </Row>
                                 <Row style={Styles.textRow}>
                                     <Text style={Styles.grayText}>Apps should empower you to feel aware and in control of how much time you spend using the app.</Text>
+                                </Row>
+                            </Grid>
+                        </Row>
+                        <Row style={Styles.row3}>
+                            <Grid style={Styles.gridContainer}>
+                                <Row style={Styles.autoplayTitleRow}>
+                                    <Text style={Styles.autoplayTitle}>Autoplay</Text>
+                                </Row>
+                                <Row style={Styles.autoplayImgRow}>
+                                    <Image
+                                        style={Styles.autoplayImg}
+                                        source={require('./img/autoplay.png')}
+                                    />
+                                </Row>
+                                <Row style={Styles.autoplayTextRow}>
+                                    <Text style={Styles.grayText}>When the video <Text style={Styles.purpleText}>autoplays</Text>, the app makes the choice for you. You didn’t ask to watch the next video.</Text>
+                                </Row>
+                            </Grid>
+                        </Row>
+                        <Row style={Styles.row4}>
+                            <Grid style={Styles.gridContainer}>
+                                <Row style={Styles.queueButtonRow}>
+                                    <Button
+                                        rounded
+                                        style={Styles.queueButton}
+                                    >
+                                        <Text>Queue a challenge for tomorrow</Text>
+                                    </Button>
                                 </Row>
                             </Grid>
                         </Row>

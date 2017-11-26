@@ -37,7 +37,8 @@ export default StyleSheet.create({
     timeText: {
         color: purple,
         fontWeight: 'bold',
-        fontSize: 15
+        fontSize: 15,
+        fontFamily: 'avenir-heavy'
     },
     controlTextSpan: {
         justifyContent: 'center',
@@ -49,7 +50,8 @@ export default StyleSheet.create({
     controlText: {
         color: purple,
         fontWeight: 'bold',
-        fontSize: 23
+        fontSize: 23,
+        fontFamily: 'avenir-heavy'
     },
     // row 1 -end-
 

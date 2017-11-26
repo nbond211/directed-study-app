@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { View, Image } from 'react-native';
-import { Button, Container, Content, Text } from 'native-base';
+import { Button, Container, Content } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 
+import Text from '../../../../components/text';
 import Styles from './styles';
 
 export default class Time extends Component {

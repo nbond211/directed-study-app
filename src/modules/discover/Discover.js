@@ -1,33 +1,61 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyleSheet } from 'react-native';
 import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
-import { connect } from 'react-redux';
 
-import * as actions from './actions';
 import Time from './categories/time/Time';
 import Emotions from './categories/emotions/Emotions';
 import Habits from './categories/habits/Habits';
 import Notifications from './categories/notifications/Notifications';
 
-const Discover = props => {
+import Styles from './styles';
 
-  const { changeCategory, category } = props;
+const Discover = () => {
 
   return (
       <Container>
-        <Header hasTabs/>
-        <Tabs renderTabBar={()=> <ScrollableTab />}>
-          <Tab heading="TIME">
+        <Header
+            style={Styles.header}
+            hasTabs
+        />
+        <Tabs
+            renderTabBar={()=> <ScrollableTab />}
+            tabBarUnderlineStyle={Styles.underline}
+            style={Styles.header}
+        >
+          <Tab
+              heading="TIME"
+              tabStyle={Styles.header}
+              activeTabStyle={Styles.header}
+              textStyle={Styles.defaultText}
+              activeTextStyle={Styles.activeText}
+          >
             <Time />
           </Tab>
-          <Tab heading="EMOTIONS">
+          <Tab
+              heading="EMOTIONS"
+              tabStyle={Styles.header}
+              activeTabStyle={Styles.header}
+              textStyle={Styles.defaultText}
+              activeTextStyle={Styles.activeText}
+          >
             <Emotions />
           </Tab>
-          <Tab heading="HABITS">
+          <Tab
+              heading="HABITS"
+              tabStyle={Styles.header}
+              activeTabStyle={Styles.header}
+              textStyle={Styles.defaultText}
+              activeTextStyle={Styles.activeText}
+          >
             <Habits />
           </Tab>
-          <Tab heading="NOTIFICATIONS">
+          <Tab
+              heading="NOTIFICATIONS"
+              tabStyle={Styles.header}
+              activeTabStyle={Styles.header}
+              textStyle={Styles.defaultText}
+              activeTextStyle={Styles.activeText}
+          >
             <Notifications />
           </Tab>
         </Tabs>
@@ -45,11 +73,4 @@ Discover.navigationOptions = {
   tabBarLabel: 'Discover'
 };
 
-export default connect(
-  state => ({
-    category: state.discover.category
-  }),
-  dispatch => ({
-    changeCategory: category => dispatch(actions.changeCategory(category))
-  })
-)(Discover);
+export default Discover;

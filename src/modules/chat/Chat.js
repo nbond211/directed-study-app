@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import { connect } from 'react-redux';
 import { GiftedChat } from 'react-native-gifted-chat';
-import { Container, Header, Content, Button, Text } from 'native-base';
+import { Container, Header, Content, Button, Text, Icon } from 'native-base';
 
 import * as actions from './actions';
 import convoData from './conversations/emotions/dare-selfie';
@@ -27,6 +27,17 @@ const {convo} = convoData;
 
 class Chat extends React.Component {
     static displayName = 'Chat';
+
+    static navigationOptions = {
+        tabBarLabel: 'Chat',
+        tabBarIcon: ({ tintColor }) => (
+            <Icon
+                name='ios-chatbubbles'
+                size={26}
+                style={{ color: tintColor }}
+            />
+        )
+    };
 
     componentDidMount() {
         const { currentMessage, messageSent, sendTuttiMessage } = this.props;

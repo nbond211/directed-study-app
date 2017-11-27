@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container, Header, Tab, Tabs, ScrollableTab } from 'native-base';
+import { Container, Header, Tab, Tabs, ScrollableTab, Icon } from 'native-base';
 
 import Time from './categories/time/Time';
 import Emotions from './categories/emotions/Emotions';
@@ -70,7 +70,14 @@ Discover.propTypes = {
 };
 
 Discover.navigationOptions = {
-  tabBarLabel: 'Discover'
+  tabBarLabel: 'Discover',
+  tabBarIcon: ({ tintColor }) => (
+        <Icon
+            name='ios-search'
+            size={26}
+            style={{ color: tintColor }}
+        />
+    )
 };
 
 export default Discover;

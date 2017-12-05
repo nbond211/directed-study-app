@@ -16,7 +16,7 @@ export default class Time extends Component {
                             <Grid style={Styles.gridContainer}>
                                 <Row style={Styles.timeRow}>
                                     <View style={Styles.timeTextSpan}>
-                                        <Text style={Styles.timeText}>TIME</Text>
+                                        <Text style={Styles.timeText}>Time</Text>
                                     </View>
                                 </Row>
                                 <Row style={Styles.controlRow}>

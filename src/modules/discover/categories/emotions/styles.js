@@ -16,38 +16,38 @@ export default StyleSheet.create({
         paddingLeft: 40,
         paddingRight: 40
     },
-    timeRow: {
-        marginTop: 90,
+    emotionsRow: {
+        marginTop: 70,
         marginBottom: 5,
         height: 27,
         flex: 0
     },
-    controlRow: {
-        marginBottom: 22,
-        height: 72,
+    questionRow: {
+        marginBottom: 17,
+        height: 97,
         flex: 0
     },
-    timeTextSpan: {
+    emotionsTextSpan: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: lightGray,
         height: 27,
-        width: 53
+        width: 85
     },
-    timeText: {
+    emotionsText: {
         color: purple,
         fontWeight: 'bold',
         fontSize: 15,
         fontFamily: 'avenir-heavy'
     },
-    controlTextSpan: {
+    questionTextSpan: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: lightGray,
-        height: 72,
+        height: 97,
         width: 241
     },
-    controlText: {
+    questionText: {
         color: purple,
         fontWeight: 'bold',
         fontSize: 23,
@@ -57,7 +57,7 @@ export default StyleSheet.create({
 
     // row 2 -start-
     row2: {
-        height: 175,
+        height: 257,
         backgroundColor: lightGray
     },
     textRow: {
@@ -78,29 +78,29 @@ export default StyleSheet.create({
 
     // row 3 -start-
     row3: {
-        height: 330,
+        height: 281,
         backgroundColor: lightBlue
     },
-    autoplayTitle: {
+    sectionTitle: {
         fontSize: 20,
         color: darkPurple,
         fontWeight: 'bold'
     },
-    autoplayTitleRow: {
+    sectionTitleRow: {
         flex: 0,
         marginTop: 14,
         marginBottom: 7
     },
-    autoplayImg: {
-        height: 171,
-        width: 297
+    likesImg: {
+        height: 115,
+        width: 266
     },
-    autoplayImgRow: {
-        height: 171,
+    likesImgRow: {
+        height: 115,
         flex: 0,
         marginBottom: 15
     },
-    autoplayTextRow: {
+    likesTextRow: {
         flex: 0,
         justifyContent: 'center',
         alignItems: 'center'

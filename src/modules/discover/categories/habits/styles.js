@@ -17,48 +17,49 @@ export default StyleSheet.create({
         paddingLeft: 40,
         paddingRight: 40
     },
-    timeRow: {
-        marginTop: 90,
+    titleRow: {
+        marginTop: 70,
         marginBottom: 5,
         height: 27,
         flex: 0
     },
-    controlRow: {
-        marginBottom: 22,
-        height: 72,
+    questionRow: {
+        marginBottom: 17,
+        height: 71,
         flex: 0
     },
-    timeTextSpan: {
+    titleTextSpan: {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: lightGray,
         height: 27,
-        width: 53
+        width: 66
     },
-    timeText: {
+    titleText: {
         color: purple,
         fontWeight: 'bold',
         fontSize: 15,
         fontFamily: 'avenir-heavy'
     },
-    controlTextSpan: {
+    questionTextSpan: {
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         backgroundColor: lightGray,
-        height: 72,
+        height: 71,
         width: 241
     },
-    controlText: {
+    questionText: {
         color: purple,
         fontWeight: 'bold',
         fontSize: 23,
-        fontFamily: 'avenir-heavy'
+        fontFamily: 'avenir-heavy',
+        marginLeft: 10
     },
     // row 1 -end-
 
     // row 2 -start-
     row2: {
-        height: 175,
+        height: 211,
         backgroundColor: lightGray
     },
     textRow: {
@@ -79,29 +80,29 @@ export default StyleSheet.create({
 
     // row 3 -start-
     row3: {
-        height: 330,
+        height: 292,
         backgroundColor: lightPurple
     },
-    autoplayTitle: {
+    sectionTitle: {
         fontSize: 20,
         color: darkPurple,
         fontWeight: 'bold'
     },
-    autoplayTitleRow: {
+    sectionTitleRow: {
         flex: 0,
         marginTop: 14,
-        marginBottom: 7
+        marginBottom: 12
     },
-    autoplayImg: {
-        height: 171,
-        width: 297
+    manualRefreshImg: {
+        height: 115,
+        width: 266
     },
-    autoplayImgRow: {
-        height: 171,
+    manualRefreshImgRow: {
+        height: 115,
         flex: 0,
         marginBottom: 15
     },
-    autoplayTextRow: {
+    likesTextRow: {
         flex: 0,
         justifyContent: 'center',
         alignItems: 'center'

@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 const lightBlue = '#B7C6FF';
 const purple ='#7875FF';
+const lightPurple = '#E3E9FF';
 const lightGray ='#FAFCFF';
 const darkGray = '#6D6D6D';
 const darkPurple = '#4C4AC8';
@@ -79,7 +80,7 @@ export default StyleSheet.create({
     // row 3 -start-
     row3: {
         height: 281,
-        backgroundColor: lightBlue
+        backgroundColor: lightPurple
     },
     sectionTitle: {
         fontSize: 20,

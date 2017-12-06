@@ -4850,6 +4850,12 @@ react-native-scrollable-mixin@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/react-native-scrollable-mixin/-/react-native-scrollable-mixin-1.0.1.tgz#34a32167b64248594154fd0d6a8b03f22740548e"
 
+react-native-simple-picker@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/react-native-simple-picker/-/react-native-simple-picker-1.4.3.tgz#06cc2a436ab1026fbc509f388adcfd09e997f320"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-svg@5.4.2:
   version "5.4.2"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.4.2.tgz#a01b4d88cda4b8ef4b2bc1adf05e11ec93a77b79"

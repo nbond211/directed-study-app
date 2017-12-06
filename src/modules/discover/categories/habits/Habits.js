@@ -52,6 +52,23 @@ export default class Habits extends Component {
                                 </Row>
                             </Grid>
                         </Row>
+
+                        <Row style={Styles.row5}>
+                            <Grid style={Styles.gridContainer}>
+                                <Row style={Styles.sectionTitleRow}>
+                                    <Text style={Styles.sectionTitle}>Notifications</Text>
+                                </Row>
+                                <Row style={Styles.notificationsImgRow}>
+                                    <Image
+                                        style={Styles.notificationsImg}
+                                        source={require('./img/notifications.png')}
+                                    />
+                                </Row>
+                                <Row style={Styles.manualRefreshTextRow}>
+                                    <Text style={Styles.grayText}>If you check notifications first thing in the morning, you likely aren’t thinking about why this habit has become a part of your morning routine. Is this how you want to be spending your time in the morning?</Text>
+                                </Row>
+                            </Grid>
+                        </Row>
                         <Row style={Styles.row4}>
                             <Grid style={Styles.gridContainer}>
                                 <Row style={Styles.queueButtonRow}>

@@ -121,6 +121,22 @@ export default StyleSheet.create({
     queueButton: {
         alignSelf: 'center',
         backgroundColor: purple
-    }
+    },
     // row 4 -end-
+
+    // row 5 -start-
+    row5: {
+        height: 363,
+        backgroundColor: lightPurple
+    },
+    notificationsImg: {
+        height: 115,
+        width: 266
+    },
+    notificationsRow: {
+        height: 115,
+        flex: 0,
+        marginBottom: 15
+    }
+    // row 5 -end-
 });

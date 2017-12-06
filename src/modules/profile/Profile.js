@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { Image } from 'react-native';
 import { Container, Header, Left, Body, Right, Title, Icon, Button } from 'native-base';
 import { Column, Row, Grid } from 'react-native-easy-grid';
 import SimplePicker from 'react-native-simple-picker';
@@ -59,6 +59,19 @@ class Profile extends React.Component {
                         >
                             <Text style={Styles.selectedOption}>{this.state.selectedOption}</Text>
                         </Button>
+                    </Row>
+                    <Row style={Styles.myChallengesRow}>
+                        <Text style={Styles.myChallenges}>My Challenges</Text>
+                    </Row>
+                    <Row style={Styles.badgeContainer}>
+                            <Image
+                                style={Styles.emotionsBadgeImg}
+                                source={require('./img/emotions-badge.png')}
+                            />
+                            <Image
+                                style={Styles.timeBadgeImg}
+                                source={require('./img/time-badge.png')}
+                            />
                     </Row>
                 </Grid>
                 <SimplePicker

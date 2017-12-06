@@ -57,5 +57,25 @@ export default StyleSheet.create({
         marginLeft: 15,
         fontSize: 18,
         color: darkGray
+    },
+    myChallengesRow: {
+        marginBottom: 15,
+        flex: 0
+    },
+    myChallenges: {
+       fontSize: 23,
+       color: darkGray
+    },
+    badgeContainer: {
+      flex: 0,
+      justifyContent: 'space-around'
+    },
+    emotionsBadgeImg: {
+        width: 114,
+        height: 114
+    },
+    timeBadgeImg: {
+        width: 120,
+        height: 120
     }
 });

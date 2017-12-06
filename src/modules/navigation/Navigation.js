@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addNavigationHelpers, TabNavigator } from 'react-navigation';
 import discoverScreen from '../discover/Discover';
 import chatScreen from '../chat/Chat';
+import profileScreen from '../profile/Profile';
 
 const white = '#FFF';
 const purple ='#7875FF';
@@ -11,7 +12,8 @@ const lightPurple = '#ABAFFC';
 
 export const AppNavigator = TabNavigator({
   Discover: { screen: discoverScreen },
-  Chat: { screen: chatScreen }
+  Chat: { screen: chatScreen },
+  Profile: { screen: profileScreen }
 },
     {
       tabBarOptions: {
